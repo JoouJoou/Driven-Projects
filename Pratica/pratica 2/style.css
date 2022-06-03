@@ -1,0 +1,34 @@
+body {
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #333333;
+  height: 64px;
+  text-align: center;
+}
+
+.img-meme {
+  height: 100%;
+  width: 100%;
+}
+
+.meme {
+  width: 640px;
+  height: auto;
+  margin: 30px auto 0px auto;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 0px 1px 1px #eaeaea;
+}
+
+.titulo {
+  font-size: 48px;
+  font-weight: bold;
+  color: #aa4653;
+  margin: 30px;
+}
+
+.legenda {
+  color: #000000;
+  margin: 0px 30px 30px 30px;
+}
