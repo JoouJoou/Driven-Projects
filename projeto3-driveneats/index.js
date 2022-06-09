@@ -46,7 +46,7 @@ function selectFood(value) {
 
   if (choices === 3) {
     const request = document.querySelector("footer");
-    request.innerHTML = `<a href='https://wa.me/5581995442300?text=${generatemsg(
+    request.innerHTML = `<a href='https://wa.me/5581997276968?text=${generatemsg(
       food_price,
       drink_price,
       dessert_price
@@ -82,7 +82,7 @@ function selectDrink(value) {
 
   if (choices === 3) {
     const request = document.querySelector("footer");
-    request.innerHTML = `<a href='https://wa.me/5581995442300?text=${generatemsg(
+    request.innerHTML = `<a href='https://wa.me/5581997276968?text=${generatemsg(
       food_price,
       drink_price,
       dessert_price
@@ -118,7 +118,7 @@ function selectDessert(value) {
 
   if (choices === 3) {
     const request = document.querySelector("footer");
-    request.innerHTML = `<a href='https://wa.me/558186946637?text=${generatemsg(
+    request.innerHTML = `<a href='https://wa.me/5581997276968?text=${generatemsg(
       food_price,
       drink_price,
       dessert_price
