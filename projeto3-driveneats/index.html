@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Driven Eats</title>
+</head>
+
+<body>
+    <header>
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </header>
+    <main>
+        <h1>Primeiro, seu prato</h1>
+        <section>
+            <div class="container food" id="chicken" onclick="selectFood(this)">
+                <div class="elements">
+                    <img src="img/frango_yin_yang.svg" alt="">
+                    <h2>Frango Yin Yang</h2>
+                    <p>Um pouco de batata<br />Um pouco de salada</p>
+                    <div class="option-footer">
+                        <h3>R$ 14,90</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container food" id="chicken" onclick="selectFood(this)">
+                <div class="elements">
+                    <img src="img/frango_yin_yang.svg" alt="">
+                    <h2>Frango Yin Yang</h2>
+                    <p>Um pouco de batata<br />Um pouco de salada</p>
+                    <div class="option-footer">
+                        <h3>R$ 14,90</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container food" id="chicken" onclick="selectFood(this)">
+                <div class="elements">
+                    <img src="img/frango_yin_yang.svg" alt="">
+                    <h2>Frango Yin Yang</h2>
+                    <p>Um pouco de batata<br />Um pouco de salada</p>
+                    <div class="option-footer">
+                        <h3>R$ 14,90</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1>Agora, sua bebida</h1>
+        <section>
+            <div class="container drink" id="coke" onclick="selectDrink(this)">
+                <div class="elements">
+                    <img src="img/coquinha_gelada.svg" alt="">
+                    <h2>Coquinha gelada</h2>
+                    <p>Lata 350ml</p>
+                    <div class="option-footer">
+                        <h3>R$ 4,90</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container drink" id="coke" onclick="selectDrink(this)">
+                <div class="elements">
+                    <img src="img/coquinha_gelada.svg" alt="">
+                    <h2>Coquinha gelada</h2>
+                    <p>Lata 350ml</p>
+                    <div class="option-footer">
+                        <h3>R$ 4,90</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container drink" id="coke" onclick="selectDrink(this)">
+                <div class="elements">
+                    <img src="img/coquinha_gelada.svg" alt="">
+                    <h2>Coquinha gelada</h2>
+                    <p>Lata 350ml</p>
+                    <div class="option-footer">
+                        <h3>R$ 4,90</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1>Por fim, sua sobremesa</h1>
+        <section>
+            <div class="container dessert" id="pudim" onclick="selectDessert(this)">
+                <div class="elements">
+                    <img src="img/pudim.svg" alt="">
+                    <h2>Pudim</h2>
+                    <p>Apenas pudim</p>
+                    <div class="option-footer">
+                        <h3>R$ 7,90</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container dessert" id="pudim" onclick="selectDessert(this)">
+                <div class="elements">
+                    <img src="img/pudim.svg" alt="">
+                    <h2>Pudim</h2>
+                    <p>Apenas pudim</p>
+                    <div class="option-footer">
+                        <h3>R$ 7,90</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container dessert" id="pudim" onclick="selectDessert(this)">
+                <div class="elements">
+                    <img src="img/pudim.svg" alt="">
+                    <h2>Pudim</h2>
+                    <p>Apenas pudim</p>
+                    <div class="option-footer">
+                        <h3>R$ 7,90</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <button class="button_request">Selecione os 3 itens<br />para fechar o pedido</button>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

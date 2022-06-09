@@ -1,0 +1,136 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #eeeeee;
+  max-width: 414px;
+}
+
+header {
+  color: #ffffff;
+  background-color: #cf2b2b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header > * {
+  margin-left: 21px;
+}
+
+header h1 {
+  font-family: "Righteous", cursive;
+  font-size: 44px;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+main {
+  margin-left: 21px;
+  margin-top: 123px;
+  margin-bottom: 108px;
+}
+
+main h1 {
+  font-family: "Righteous", cursive;
+  font-size: 26px;
+  color: #333333;
+  margin-bottom: 17px;
+  margin-top: 27px;
+}
+
+section {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+}
+
+.container {
+  width: 172px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+.container h2 {
+  margin-top: 8px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 16px;
+}
+.container p {
+  margin-top: 10px;
+  color: #a6a6a6;
+  font-weight: 300;
+
+  font-size: 15px;
+}
+.container h3 {
+  color: #000000;
+  font-size: 16px;
+}
+.elements {
+  padding: 8px 10px 5px 10px;
+}
+
+footer {
+  background-color: #ffffff;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.button_request {
+  height: 61px;
+  width: 85%;
+  border: none;
+  border-radius: 50px;
+  font-size: 19px;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  background-color: #cbcbcb;
+}
+
+.click {
+  border: 5px solid #32b72f;
+}
+
+.option-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.request_ready {
+  height: 61px;
+  width: 85%;
+  border: none;
+  border-radius: 50px;
+  font-size: 19px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background-color: #32b72f;
+  cursor: pointer;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
