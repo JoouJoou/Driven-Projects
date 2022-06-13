@@ -128,9 +128,3 @@ footer {
   background-color: #32b72f;
   cursor: pointer;
 }
-
-a {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}

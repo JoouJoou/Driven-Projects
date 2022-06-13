@@ -107,15 +107,15 @@ function selectDessert(value) {
 function send_msg() {
   const first_name = prompt("Digite seu nome:");
   const adress = prompt("Digite seu endereço:");
-  window.open(
-    `https://wa.me/5581997276968?text=${generate_msg(
-      food_price,
-      drink_price,
-      dessert_price,
-      first_name,
-      adress
-    )}`
+  const number = "5581997276968";
+  const msg = generate_msg(
+    food_price,
+    drink_price,
+    dessert_price,
+    first_name,
+    adress
   );
+  window.open(`https://wa.me/${number}?text=${msg}`);
 }
 
 function generate_msg(
