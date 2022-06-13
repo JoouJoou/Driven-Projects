@@ -4,7 +4,7 @@ let food = 0;
 let drink = 0;
 let dessert = 0;
 
-/* Setting prices and names of the options there are selected */
+/* Setting prices and generate_msg of the options there are selected */
 let food_price = 0;
 let drink_price = 0;
 let dessert_price = 0;
@@ -40,11 +40,7 @@ function selectFood(value) {
 
   if (choices === 3) {
     const request = document.querySelector("footer");
-    request.innerHTML = `<a href='https://wa.me/5581997276968?text=${generatemsg(
-      food_price,
-      drink_price,
-      dessert_price
-    )}'class='request_ready'><button class='request_ready'>Fechar pedido</button></a>`;
+    request.innerHTML = `<button class='request_ready' onclick='send_msg()'>Fechar pedido</button>`;
   }
 }
 
@@ -73,11 +69,7 @@ function selectDrink(value) {
 
   if (choices === 3) {
     const request = document.querySelector("footer");
-    request.innerHTML = `<a href='https://wa.me/5581997276968?text=${generatemsg(
-      food_price,
-      drink_price,
-      dessert_price
-    )}'class='request_ready'><button class='request_ready'>Fechar pedido</button></a>`;
+    request.innerHTML = `<button class='request_ready' onclick='send_msg()'>Fechar pedido</button>`;
   }
 }
 
@@ -106,19 +98,35 @@ function selectDessert(value) {
 
   if (choices === 3) {
     const request = document.querySelector("footer");
-    request.innerHTML = `<a href='https://wa.me/5581997276968?text=${generatemsg(
-      food_price,
-      drink_price,
-      dessert_price
-    )}'class='request_ready'><button class='request_ready'>Fechar pedido</button></a>`;
+    request.innerHTML = `<button class='request_ready' onclick='send_msg()'>Fechar pedido</button>`;
   }
 }
 
 /* Generating msg */
 
-function generatemsg(food_value, drink_value, dessert_value) {
+function send_msg() {
+  const first_name = prompt("Digite seu nome:");
+  const adress = prompt("Digite seu endereço:");
+  window.open(
+    `https://wa.me/5581997276968?text=${generate_msg(
+      food_price,
+      drink_price,
+      dessert_price,
+      first_name,
+      adress
+    )}`
+  );
+}
+
+function generate_msg(
+  food_value,
+  drink_value,
+  dessert_value,
+  client_name,
+  client_adress
+) {
   const total = (food_value + drink_value + dessert_value).toFixed(2);
   return encodeURIComponent(
-    `Olá, gostaria de fazer o *pedido:*\n*- Prato:*  ${food_name}\n*- Bebida:*  ${drink_name}\n*- Sobremesa:*  ${dessert_name}\n*Total:* R$ ${total}`
+    `Olá, gostaria de fazer o *pedido:*\n*- Prato:*  ${food_name}\n*- Bebida:*  ${drink_name}\n*- Sobremesa:*  ${dessert_name}\n*Total:* R$ ${total}\n \n*Nome:* ${client_name}\n*Endereço:* ${client_adress}`
   );
 }
