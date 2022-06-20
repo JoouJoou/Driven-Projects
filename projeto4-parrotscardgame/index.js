@@ -86,9 +86,9 @@ function check(element1, element2, cards) {
   } else {
     const img1 = element1.firstElementChild;
     const img2 = element2.firstElementChild;
-    element1.setAttribute(`onclick`, `turn(this)`);
+    element1.setAttribute(`onclick`, `${click}`);
     element1.classList.remove("virada");
-    element2.setAttribute(`onclick`, `turn(this)`);
+    element2.setAttribute(`onclick`, `${click}`);
     element2.classList.remove("virada");
     img1.src = `img/front.svg`;
     img2.src = `img/front.svg`;
