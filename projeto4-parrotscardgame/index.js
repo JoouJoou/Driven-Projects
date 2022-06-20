@@ -19,6 +19,8 @@ const count = document.querySelector(`header p`);
 
 start();
 function start() {
+  timersec = 0;
+  timermin = 0;
   setInterval(() => {
     timersec++;
     if (timersec === 60) {
@@ -55,7 +57,6 @@ function start() {
 function turn(element) {
   plays++;
   const flipped_card = document.querySelector(".clicked");
-  console.log(flipped_card);
   element.classList.add("virada");
   element.classList.add("clicked");
   const img = element.firstElementChild;

@@ -43,11 +43,11 @@ header {
 }
 
 .card {
-  width: 117px;
-  height: 146px;
+  width: 11.7rem;
+  height: 14.6rem;
   background-color: #a7e9af;
-  border: 1px solid #99cea8;
-  border-radius: 5px;
+  border: 0.1rem solid #99cea8;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,6 +60,6 @@ header {
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
 }
