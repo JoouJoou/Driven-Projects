@@ -56,3 +56,22 @@ function render_msg() {
       chat.lastElementChild.scrollIntoView();
     });
 }
+
+function keysend(event) {
+  if (event.key === `Enter`) {
+    send_msg();
+  }
+}
+function send_msg() {
+  let text = document.querySelector("input");
+  const obj = {
+    from: username,
+    to,
+    text: text.value,
+    type: "message",
+  };
+  axios
+    .post("https://mock-api.driven.com.br/api/v6/uol/messages", obj)
+    .then(render_msg);
+  text.value = "";
+}
