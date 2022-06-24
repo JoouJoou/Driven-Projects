@@ -1,9 +1,12 @@
 body {
-  width: 375px;
+  max-width: 418px;
   height: 617px;
   margin: 0 auto;
   background-color: #f3f3f3;
   font-family: "Roboto", sans-serif;
+}
+strong {
+  font-weight: bold;
 }
 
 header {
@@ -13,9 +16,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -25,13 +25,41 @@ header div {
   justify-content: space-between;
 }
 
+main {
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 26px;
+  overflow-y: scroll;
+}
+main div {
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 15px 8px;
+  gap: 4px;
+  display: flex;
+}
+main span {
+  color: #aaaaaa;
+}
+
+.status-msg {
+  background-color: #dcdcdc;
+}
+.msg {
+  background-color: #ffffff;
+}
+.private-msg {
+  background-color: #ffdede;
+}
+
 footer {
   width: 100%;
   height: 80px;
   background-color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +77,7 @@ input {
   font-size: 18px;
   border: none;
   outline: none;
+  width: 90%;
 }
 input::placeholder {
   font-size: 18px;
@@ -57,5 +86,5 @@ input::placeholder {
 
 button {
   border: none;
-  background-color: none;
+  background: none;
 }
