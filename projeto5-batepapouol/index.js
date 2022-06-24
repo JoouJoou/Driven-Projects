@@ -23,4 +23,36 @@ function main() {
       }),
     5000
   );
+  render_msg();
+}
+
+function render_msg() {
+  axios
+    .get("https://mock-api.driven.com.br/api/v6/uol/messages")
+    .then((response) => {
+      const chat = document.querySelector("main");
+      chat.innerHTML = "";
+      response.data.forEach((value) => {
+        if (value.type === "status") {
+          chat.innerHTML += `<div class="status-msg">
+            <h1>
+                <span>${value.time}</span> <strong>${value.from} </strong>${value.text}
+            </h1>
+        </div>`;
+        } else if (value.type === "message") {
+          chat.innerHTML += `<div class="msg">
+            <h1>
+                <span>${value.time}</span> <strong>${value.from} </strong>para<strong> ${value.to}:</strong> ${value.text}
+            </h1>
+        </div>`;
+        } else if (value.type === "private_message") {
+          chat.innerHTML += `<div class="private-msg">
+            <h1>
+                <span>${value.time}</span> <strong>${value.from}</strong> reservadamente para<strong> ${value.to}:</strong> ${value.text}
+            </h1>
+        </div>`;
+        }
+      });
+      chat.lastElementChild.scrollIntoView();
+    });
 }
