@@ -71,11 +71,13 @@ function render_msg() {
             </h1>
         </div>`;
         } else if (value.type === "private_message") {
-          chat.innerHTML += `<div class="private-msg">
-            <h1>
-                <span>${value.time}</span> <strong>${value.from}</strong> reservadamente para<strong> ${value.to}:</strong> ${value.text}
-            </h1>
-        </div>`;
+          if (value.to === username) {
+            chat.innerHTML += `<div class="private-msg">
+              <h1>
+                  <span>${value.time}</span> <strong>${value.from}</strong> reservadamente para<strong> ${value.to}:</strong> ${value.text}
+              </h1>
+          </div>`;
+          }
         }
       });
       chat.lastElementChild.scrollIntoView();
