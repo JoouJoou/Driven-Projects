@@ -1,10 +1,8 @@
 const chat = document.querySelector(".input-chat");
-console.log(chat);
 chat.addEventListener(`keypress`, keysend_chat);
 let to = "Todos";
 let username = "";
 const login = document.querySelector(".input-login");
-console.log(login);
 const hide_chat = document.querySelectorAll(".hidden");
 const hide_login = document.querySelector(".main-login");
 login.addEventListener("keypress", keysend_login);
@@ -12,7 +10,6 @@ login.addEventListener("keypress", keysend_login);
 function button_color() {}
 
 function checkName() {
-  console.log(username);
   const promise = axios
     .post(`https://mock-api.driven.com.br/api/v6/uol/participants`, {
       name: username,
