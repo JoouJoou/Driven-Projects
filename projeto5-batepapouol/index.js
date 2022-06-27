@@ -1,19 +1,35 @@
-let username = prompt(`Digite seu nome:`);
+const chat = document.querySelector(".input-chat");
+console.log(chat);
+chat.addEventListener(`keypress`, keysend_chat);
 let to = "Todos";
-const form = document.querySelector(`input`);
-form.addEventListener(`keypress`, keysend);
+let username = "";
+const login = document.querySelector(".input-login");
+console.log(login);
+const hide_chat = document.querySelectorAll(".hidden");
+const hide_login = document.querySelector(".main-login");
+login.addEventListener("keypress", keysend_login);
+
+function button_color() {}
 
 function checkName() {
-  username = prompt(`Digite seu nome:`);
-  axios
+  console.log(username);
+  const promise = axios
     .post(`https://mock-api.driven.com.br/api/v6/uol/participants`, {
       name: username,
     })
-    .then(() => main())
-    .catch(() => checkName());
-}
+    .then(() => {
+      hide_chat.forEach((value) => {
+        value.classList.remove("hidden");
+      });
 
-checkName();
+      hide_login.classList.add("hidden");
+      main();
+    })
+    .catch((value) => {
+      console.log(value);
+      window.alert("Nome de usuário já existe");
+    });
+}
 
 function main() {
   setInterval(
@@ -24,13 +40,25 @@ function main() {
     5000
   );
   render_msg();
+  setInterval(() => render_msg(), 3000);
+}
+
+function keysend_login(event) {
+  if (event.key === `Enter`) {
+    send_login();
+  }
+}
+function send_login() {
+  const user = document.querySelector(".input-login");
+  username = user.value;
+  checkName();
 }
 
 function render_msg() {
   axios
     .get("https://mock-api.driven.com.br/api/v6/uol/messages")
     .then((response) => {
-      const chat = document.querySelector("main");
+      const chat = document.querySelector(".main-chat");
       chat.innerHTML = "";
       response.data.forEach((value) => {
         if (value.type === "status") {
@@ -57,13 +85,8 @@ function render_msg() {
     });
 }
 
-function keysend(event) {
-  if (event.key === `Enter`) {
-    send_msg();
-  }
-}
 function send_msg() {
-  let text = document.querySelector("input");
+  let text = document.querySelector(".input-chat");
   const obj = {
     from: username,
     to,
@@ -74,4 +97,10 @@ function send_msg() {
     .post("https://mock-api.driven.com.br/api/v6/uol/messages", obj)
     .then(render_msg);
   text.value = "";
+}
+
+function keysend_chat(event) {
+  if (event.key === `Enter`) {
+    send_msg();
+  }
 }

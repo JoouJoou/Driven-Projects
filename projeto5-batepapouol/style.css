@@ -16,6 +16,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -25,13 +28,13 @@ header div {
   justify-content: space-between;
 }
 
-main {
+.main-chat {
   width: 100%;
   height: 540px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-top: 26px;
+  margin-top: 116px;
   overflow-y: scroll;
 }
 main div {
@@ -63,6 +66,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -72,19 +78,23 @@ footer div {
   justify-content: space-between;
 }
 
-input {
+.input-chat {
   color: black;
   font-size: 18px;
   border: none;
   outline: none;
   width: 90%;
 }
-input::placeholder {
+.input-chat::placeholder {
   font-size: 18px;
   font-style: italic;
 }
 
-button {
+.button-chat {
   border: none;
   background: none;
+}
+
+.hidden {
+  display: none;
 }

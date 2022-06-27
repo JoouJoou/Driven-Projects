@@ -8,6 +8,7 @@
     <title>Bate-papo UOL</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylelogin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="hidden">
         <div>
             <img src="img/logo.svg" alt="">
             <img src="img/people.svg" alt="">
@@ -24,13 +25,22 @@
     </header>
 
     <main>
+        <div class="main-chat hidden">
 
+        </div>
+        <div class="main-login">
+            <img src="img/logo2.svg" alt="" class="logo">
+            <div class="login">
+                <input class="input-login" type="text" placeholder="Digite seu nome">
+                <button class="button-login" onclick="send_login()">Entrar</button>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="hidden">
         <div>
-            <input type="text" placeholder="Escreva aqui...">
-            <button type="submit"><img src="img/Vector.svg" alt="" onclick="send_msg()"></button>
+            <input class="input-chat" type="text" placeholder="Escreva aqui...">
+            <button class="button-chat" type="submit"><img src="img/Vector.svg" alt="" onclick="send_login()"></button>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
